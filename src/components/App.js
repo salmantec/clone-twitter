@@ -11,7 +11,10 @@ const App = (props) => {
     props.dispatch(handleInitialData());
   }, []);
 
-  return <div><LoadingBar />{props.loading ? null : <Dashboard />}</div>;
+  return <div>
+    <LoadingBar />
+    {props.loading ? null : <Dashboard />}
+  </div>;
 };
 
 const mapStateToProps = ({authedUser}) => (
